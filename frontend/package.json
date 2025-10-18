@@ -1,0 +1,22 @@
+{
+    "name": "mugswap-frontend",
+    "version": "1.0.0",
+    "description": "Mugswap - A Tinder-style app for coffee mugs",
+    "main": "src/main.js",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "serve": "vite preview"
+    },
+    "dependencies": {
+        "vue": "^3.3.4",
+        "vue-router": "^4.2.4",
+        "axios": "^1.5.0",
+        "pinia": "^2.1.6"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^4.3.4",
+        "vite": "^4.4.9"
+    }
+}

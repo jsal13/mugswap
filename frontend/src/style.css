@@ -1,0 +1,329 @@
+:root {
+    --color-black: #1a1a1a;
+    --color-jade: #00a676;
+    --color-jade-light: #4db8a3;
+    --color-jade-dark: #007d5a;
+    --color-white: #ffffff;
+    --color-off-white: #f8f9fa;
+    --color-gray-light: #e9ecef;
+    --color-gray: #6c757d;
+    --color-gray-dark: #495057;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--color-black) 0%, var(--color-gray-dark) 100%);
+    min-height: 100vh;
+    color: var(--color-white);
+}
+
+#app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.app-header {
+    background: var(--color-black);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--color-jade);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-brand h1 {
+    color: var(--color-jade);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--color-white);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s;
+    border: 1px solid transparent;
+}
+
+.nav-link:hover {
+    background-color: var(--color-jade);
+    border-color: var(--color-jade-light);
+    transform: translateY(-2px);
+}
+
+.logout-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Card Styles */
+.card {
+    background: var(--color-white);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    border: 3px solid var(--color-jade);
+    overflow: hidden;
+    max-width: 400px;
+    width: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 166, 118, 0.3);
+}
+
+.mug-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 2px solid var(--color-jade);
+}
+
+.card-content {
+    padding: 1.5rem;
+    background: linear-gradient(to bottom, var(--color-white) 0%, var(--color-off-white) 100%);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--color-black);
+}
+
+.card-description {
+    color: var(--color-gray-dark);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    gap: 1rem;
+    background: var(--color-black);
+}
+
+.action-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid var(--color-white);
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.pass-btn {
+    background: var(--color-black);
+    color: var(--color-white);
+    border-color: var(--color-gray);
+}
+
+.pass-btn:hover {
+    background: var(--color-gray-dark);
+    border-color: var(--color-white);
+}
+
+.like-btn {
+    background: var(--color-jade);
+    color: var(--color-white);
+    border-color: var(--color-jade-light);
+}
+
+.like-btn:hover {
+    background: var(--color-jade-light);
+    border-color: var(--color-white);
+}
+
+/* Form Styles */
+.auth-form {
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--color-jade);
+    max-width: 400px;
+    width: 100%;
+}
+
+.form-title {
+    text-align: center;
+    color: var(--color-black);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-black);
+    font-weight: bold;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--color-gray-light);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    background: var(--color-white);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-jade);
+    box-shadow: 0 0 0 3px rgba(0, 166, 118, 0.1);
+}
+
+.form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--color-gray-light);
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 80px;
+    transition: all 0.3s;
+}
+
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--color-jade);
+    box-shadow: 0 0 0 3px rgba(0, 166, 118, 0.1);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: linear-gradient(135deg, var(--color-jade) 0%, var(--color-jade-dark) 100%);
+    color: var(--color-white);
+    border: 2px solid var(--color-jade);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, var(--color-jade-light) 0%, var(--color-jade) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 166, 118, 0.3);
+}
+
+.auth-link {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.auth-link a {
+    color: var(--color-jade);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-link a:hover {
+    color: var(--color-jade-light);
+    text-decoration: underline;
+}
+
+/* Error Messages */
+.error-message {
+    color: #dc3545;
+    text-align: center;
+    margin: 1rem 0;
+    padding: 0.75rem;
+    background: rgba(220, 53, 69, 0.1);
+    border: 1px solid rgba(220, 53, 69, 0.3);
+    border-radius: 8px;
+}
+
+/* Loading State */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    color: var(--color-jade-light);
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .nav-brand h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+
+    .card {
+        max-width: 350px;
+    }
+
+    .mug-image {
+        height: 250px;
+    }
+}
