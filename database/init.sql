@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS mugswap_db;
+DROP DATABASE mugswap_db;
 -- Create database and user
 CREATE DATABASE mugswap_db;
 CREATE USER mugswap_user WITH PASSWORD 'mugswap_pass';
